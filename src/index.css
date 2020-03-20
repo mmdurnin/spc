@@ -1,8 +1,11 @@
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Roboto', sans-serif; */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif; */
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +13,40 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1 {
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  /* -webkit-text-stroke-width: .01px;
+  -webkit-text-stroke-color: white; */
+}
+h2 {
+  text-align: left;
+  color: white;
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+}
+
+button {
+  padding: 0 .5em;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
 }
