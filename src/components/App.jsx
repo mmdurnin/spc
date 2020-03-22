@@ -7,9 +7,11 @@ import About from './about/about';
 function App() {
   return (
     <div className="App">
-        <NavBar />
-        <Banner />
+      <NavBar />
+      <Banner />
+      <div className="body">
         <About />
+      </div>
     </div>
   );
 }
