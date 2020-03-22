@@ -9,7 +9,6 @@ function App() {
     <div className="App">
         <NavBar />
         <Banner />
-        {/* <div className="veil veil-vert"></div> */}
         <About />
     </div>
   );
