@@ -1,5 +1,5 @@
 import React from 'react';
-import bannerVid from "../../images/bk_vid.mp4";
+import bannerVid from "../../images/background_3.mp4";
 import photo1 from '../../images/headstand_1.jpg'
 import photo2 from '../../images/headstand_2_edited.jpg'
 import photo3 from '../../images/ph_1_edited.jpg'
@@ -33,7 +33,10 @@ class Banner extends React.Component{
           <div className="gradient-bw">
             <h1>STYLE PROZ CREW</h1>
           </div>
-          <img src={photo4} alt=""/>
+          <video id="background-video" autoPlay muted>
+            <source src={bannerVid} type="video/mp4" />
+          </video>
+          {/* <img src={photo4} alt=""/> */}
         </div>
       // </div>
     );
