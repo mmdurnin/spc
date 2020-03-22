@@ -1,14 +1,17 @@
 import React from 'react';
+import '../../stylesheets/about.css';
 
 function About() {
   return (
-    <div className="column section-right">
-      <h2>
-        Among the turmoils of everyday life, we strive to produce a small,
-        memorable show to allow you to escape for 5-10 minutes out of your day
-        to live, love, and laugh with us.
-      </h2>
-      <div className="dash-line" />
+    <div>
+      <h1 id="hip-hop">
+        <strong>H</ strong>ealthy <br />
+        <strong>I</ strong>ndependent <br />
+        <strong>P</ strong>eople <br />
+        <strong>H</ strong>elping <br />
+        <strong>O</ strong>ther <br />
+        <strong>P</ strong>eople <br />
+      </h1>
     </div>
   );
 }

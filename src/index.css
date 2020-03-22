@@ -18,9 +18,11 @@ code {
 h1 {
   text-align: left;
   font-family: 'Roboto', sans-serif;
-  /* -webkit-text-stroke-width: .01px;
-  -webkit-text-stroke-color: white; */
+  margin: 0;
+  padding: .85em;
+  color: white;
 }
+
 h2 {
   text-align: left;
   color: white;
