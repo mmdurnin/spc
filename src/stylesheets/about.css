@@ -1,5 +1,14 @@
 #hip-hop {
   font-size: 4em;
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#hip-hop strong{
+  background: linear-gradient(to bottom, #ff8a00 0%, #da1b60 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .about {
