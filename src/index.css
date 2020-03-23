@@ -33,6 +33,10 @@ p {
   color: white;
 }
 
+section {
+  padding-top: 10rem;
+}
+
 button {
   padding: 0 .5em;
   border: none;

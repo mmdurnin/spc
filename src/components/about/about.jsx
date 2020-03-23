@@ -6,7 +6,7 @@ import '../../stylesheets/about.css';
 
 function About() {
   return (
-    <div className="about">
+    <section>
       <div className="row">
         <ScrollAnimation animateIn="fadeInLeft" duration="1">
           <h2 id="hip-hop">
@@ -40,7 +40,7 @@ function About() {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

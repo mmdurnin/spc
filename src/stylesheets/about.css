@@ -13,15 +13,11 @@
   -webkit-text-fill-color: transparent;
 }
 
-.about {
-  padding-top: 10rem;
-}
-
-.about .row {
+section .row {
   justify-content: space-evenly;
 }
 
-.about p {
+section p {
   width: 50vw;
   line-height: 2.2;
 }
