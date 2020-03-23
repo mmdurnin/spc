@@ -4,14 +4,14 @@ import '../../stylesheets/about.css';
 function About() {
   return (
     <div>
-      <h1 id="hip-hop">
-        <strong>H</ strong>ealthy <br />
-        <strong>I</ strong>ndependent <br />
-        <strong>P</ strong>eople <br />
-        <strong>H</ strong>elping <br />
-        <strong>O</ strong>ther <br />
-        <strong>P</ strong>eople <br />
-      </h1>
+      <h2 id="hip-hop">
+        <strong>H</ strong>EALTHY <br />
+        <strong>I</ strong>NDEPENDENT <br />
+        <strong>P</ strong>EOPLE <br />
+        <strong>H</ strong>ELPING <br />
+        <strong>O</ strong>THER <br />
+        <strong>P</ strong>EOPLE <br />
+      </h2>
     </div>
   );
 }
