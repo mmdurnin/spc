@@ -10,10 +10,10 @@ class NavBar extends React.Component {
     return(
       <div className="row nav-container">
         <button>About</button>
+        <button>Media</button>
+        <button>Collaborators</button>
+        <button>Work With Us</button>
         <button>Events</button>
-        <button>Gallery</button>
-        <button>Contribute</button>
-        <button>Contact</button>
       </div>
     )
   }
