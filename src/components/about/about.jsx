@@ -40,6 +40,12 @@ function About() {
           </p>
         </div>
       </div>
+      <div className="stripe" />
+      <div className="stripe" />
+      <div className="stripe" />
+      <div className="stripe" />
+      <div className="stripe" />
+      <div className="stripe" />
     </section>
   );
 }

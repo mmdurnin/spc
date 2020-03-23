@@ -21,3 +21,20 @@ section p {
   width: 50vw;
   line-height: 2.2;
 }
+
+.stripe {
+  width: 100vw;
+  height: 100px;
+}
+
+.stripe:nth-of-type(3) {
+  background: linear-gradient(to bottom, #ff8a00 0%, #da1b60 100%);
+}
+
+.stripe:nth-of-type(4), .stripe:nth-of-type(6) {
+  background-color: white;
+}
+
+.stripe:nth-of-type(5) {
+  background: linear-gradient(to bottom, #ff8a00 0%, #da1b60 100%);
+}
