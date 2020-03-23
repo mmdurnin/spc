@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../stylesheets/media.css';
+import Photo from './photo.jsx';
 
 import photo1 from '../../images/headstand_1.jpg';
 import photo2 from '../../images/headstand_2_edited.jpg';
@@ -25,11 +26,15 @@ function PhotoIndex() {
     photo9,
     photo10
   ];
-  
+
   return(
     <section>
       <div className="photo-index">
-
+        {
+           photosArray.map((photo, idx) => {
+             return <Photo key={idx} photo={photo} />
+           })
+        }
       </div>
     </section>
   )
