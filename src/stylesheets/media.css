@@ -1,11 +1,11 @@
 .photo-index {
-  width: 80vw;
+  width: 100vw;
   margin: 0 auto;
   height: fit-content;
   box-sizing: border-box;
-  column-count: 4;
+  column-count: 3;
   column-gap: 1em;
-  padding: 1em;
+  /* padding: 1em; */
 }
 
 .photo-holder {
@@ -19,6 +19,7 @@
 .photo-holder img {
   width: inherit;
   height: auto;
+  max-height: 58vh;
   object-fit: cover;
   padding: 0;
 }

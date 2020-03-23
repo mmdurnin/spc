@@ -30,7 +30,7 @@ section p {
   position: relative;
   padding: 0;
   margin-top: 4rem;
-  margin-bottom: 4rem;
+  /* margin-bottom: 4rem; */
   height: fit-content;
 }
 

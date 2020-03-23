@@ -16,20 +16,20 @@ import photo10 from '../../images/ph_12.jpeg';
 function PhotoIndex() {
   const photosArray = [
     photo1,
-    photo2,
-    photo3,
-    photo4,
-    photo5,
-    photo6,
+    // photo2,
+    // photo3,
+    // photo4,
+    // photo5,
+    // photo6,
     photo7,
-    photo8,
+    // photo8,
     photo9,
     photo10
   ];
 
   return(
     <section>
-      <div className="photo-index">
+      <div className="photo-index row">
         {
            photosArray.map((photo, idx) => {
              return <Photo key={idx} photo={photo} />
