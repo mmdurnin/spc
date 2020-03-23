@@ -17,11 +17,13 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h1 {
+  font-size: 20vw;
   text-align: left;
   font-family: 'Roboto', sans-serif;
 }
 
 h2 {
+  font-size: 4rem;
   text-align: left;
   color: white;
   font-weight: 300;
@@ -59,3 +61,24 @@ button:hover {
   display: flex;
   flex-direction: row;
 }
+
+
+/*
+gradient with purples:
+3F355F
+373653
+
+gradient with red and purple:
+BB1244
+58204A
+
+looks good with black:
+333FC3 (royalish blue)
+F100B6 (HOT pink)
+
+that one animation:
+F8F8FC (almost white) -- BDC0F5 (light light purple) -- 6F58EE (lightish purple) -- 141563 (dark blue)
+39AECE -- 3F5CC4 (lighter)
+073041 (darker greenish blueish)
+3F0526 (maroon)
+*/

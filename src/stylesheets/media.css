@@ -1,5 +1,6 @@
 .photo-index {
-  width: 100vw;
+  width: 80vw;
+  margin: 0 auto;
   height: fit-content;
   box-sizing: border-box;
   column-count: 4;

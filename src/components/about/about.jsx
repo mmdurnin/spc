@@ -39,12 +39,10 @@ function About() {
           </p>
         </div>
       </div>
-      {/* <div className="stripe" />
-      <div className="stripe" />
-      <div className="stripe" />
-      <div className="stripe" />
-      <div className="stripe" />
-      <div className="stripe" /> */}
+
+      <section id="all-day">
+        <h1>ALL DAY.</h1>
+      </section>
     </section>
   );
 }

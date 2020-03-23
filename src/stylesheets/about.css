@@ -1,5 +1,4 @@
 #hip-hop {
-  font-size: 4em;
   background: white;
   background-clip: text;
   -webkit-background-clip: text;
@@ -7,7 +6,7 @@
 }
 
 #hip-hop strong{
-  background: linear-gradient(to bottom, #ff8a00 0%, #da1b60 100%);
+  background: linear-gradient(to bottom, #F8F8FC 0%, #BDC0F5 15%, #6F58EE 45%, #141563 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -22,19 +21,21 @@ section p {
   line-height: 2.2;
 }
 
-.stripe {
-  width: 100vw;
-  height: 100px;
+#all-day {
+  background: url(../images/ph_14_edited.jpg);
+  background-size: cover;
+  width: 100%;
+  color: white;
+  justify-content: space-between;
+  position: relative;
+  padding: 0;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  height: fit-content;
 }
 
-.stripe:nth-of-type(3) {
-  background: #da1b60;
-}
-
-.stripe:nth-of-type(4), .stripe:nth-of-type(6) {
-  background-color: white;
-}
-
-.stripe:nth-of-type(5) {
-  background: linear-gradient(to bottom, #ff8a00 0%, #da1b60 100%);
+#all-day h1 {
+  color: #FFF;
+  background: #000;
+  mix-blend-mode: darken;
 }
