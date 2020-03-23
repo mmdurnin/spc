@@ -5,12 +5,12 @@
   -webkit-text-fill-color: transparent;
 }
 
-#hip-hop strong{
-  background: linear-gradient(to bottom, #F8F8FC 0%, #BDC0F5 15%, #6F58EE 45%, #141563 100%);
+/* #hip-hop strong{
+  background: linear-gradient(to bottom, #D7942D 0%,#DB322D 40%, #DB322D 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
+} */
 
 section .row {
   justify-content: space-evenly;
@@ -22,7 +22,7 @@ section p {
 }
 
 #all-day {
-  background: url(../images/ph_14_edited.jpg);
+  background: url(../images/ph_14_edited2.jpg);
   background-size: cover;
   width: 100%;
   color: white;

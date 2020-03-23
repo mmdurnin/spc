@@ -85,4 +85,11 @@ F8F8FC (almost white) -- BDC0F5 (light light purple) -- 6F58EE (lightish purple)
 
 old hip hop gradient: 
 background: linear-gradient(to bottom, #ff8a00 0%, #da1b60 100%);
+
+another gradient option:
+D7942D (yellow)
+DB322D (red)
+
+nice purple gradient (matches osme pictures)
+background: linear-gradient(to bottom, #F8F8FC 0%, #BDC0F5 15%, #6F58EE 45%, #141563 100%);
 */
