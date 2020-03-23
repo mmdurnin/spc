@@ -1,7 +1,6 @@
 import React from 'react';
 import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css/animate.min.css";
-import photo from '../../images/headstand_1.jpg';
 import '../../stylesheets/about.css';
 
 function About() {
@@ -40,12 +39,12 @@ function About() {
           </p>
         </div>
       </div>
+      {/* <div className="stripe" />
       <div className="stripe" />
       <div className="stripe" />
       <div className="stripe" />
       <div className="stripe" />
-      <div className="stripe" />
-      <div className="stripe" />
+      <div className="stripe" /> */}
     </section>
   );
 }

@@ -28,7 +28,7 @@ section p {
 }
 
 .stripe:nth-of-type(3) {
-  background: linear-gradient(to bottom, #ff8a00 0%, #da1b60 100%);
+  background: #da1b60;
 }
 
 .stripe:nth-of-type(4), .stripe:nth-of-type(6) {
