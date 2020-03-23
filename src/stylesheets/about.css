@@ -1,4 +1,16 @@
 #hip-hop {
-  padding-top: 10rem;
   font-size: 4em;
+}
+
+.about {
+  padding-top: 10rem;
+}
+
+.about .row {
+  justify-content: space-evenly;
+}
+
+.about p {
+  width: 50vw;
+  line-height: 2.2;
 }

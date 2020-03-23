@@ -16,14 +16,13 @@ code {
 }
 
 h1, h2, h3, h4, h5, h6, p {
-  padding: 0;
+  padding: .85rem;
   margin: 0;
 }
 
 h1 {
   text-align: left;
   font-family: 'Roboto', sans-serif;
-  padding: .85em;
 }
 
 h2 {
@@ -31,7 +30,11 @@ h2 {
   color: white;
   font-weight: 300;
   font-family: 'Roboto', sans-serif;
-  padding: .85em;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
 }
 
 button {
