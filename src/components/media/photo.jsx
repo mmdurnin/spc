@@ -8,7 +8,8 @@ class Photo extends React.Component {
   render() {
     return(
       <div className="photo-holder">
-        <img src={this.props.photo} alt=""/>
+        <div className="photo-veil" />
+        <img src={this.props.photo} />
       </div>
     )
   }
