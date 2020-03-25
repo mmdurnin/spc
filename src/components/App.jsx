@@ -4,6 +4,7 @@ import '../App.css';
 import NavBar from './nav-bar/nav';
 import Home from './home';
 import Calendar from './events/events';
+import Media from './media/photo-index-media';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/events" component={Calendar} />
+          <Route exact path="/media" component={Media} />
         </Switch>
       </BrowserRouter>
     </div>

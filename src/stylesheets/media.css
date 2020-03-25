@@ -8,6 +8,10 @@
   /* padding: 1em; */
 }
 
+.media-index {
+  background-color: white;
+}
+
 .photo-holder {
   position: relative;
   box-sizing: border-box;

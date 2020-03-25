@@ -27,6 +27,8 @@ const photosArray = [
 class Media extends React.Component {
   constructor(props) {
     super(props)
+
+    this.state = {photos: photosArray}
   }
 
   render() {
