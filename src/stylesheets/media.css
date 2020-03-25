@@ -44,3 +44,7 @@
   background-color: transparent;
   cursor: pointer;
 }
+
+.pink {
+  border: 3px solid fuchsia;
+}
