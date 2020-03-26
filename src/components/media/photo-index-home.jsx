@@ -4,8 +4,8 @@ import '../../stylesheets/media.css';
 import Photo from './photo.jsx';
 
 import photo1 from '../../images/headstand_1.jpg';
-import photo7 from '../../images/ph_5.jpg';
-import photo9 from '../../images/ph_11.jpeg';
+import photo7 from '../../images/ph_17.jpeg';
+import photo9 from '../../images/ph_19.jpeg';
 import photo10 from '../../images/ph_12.jpeg';
 
 function PhotoIndex() {
