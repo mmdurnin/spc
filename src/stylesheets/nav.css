@@ -11,6 +11,6 @@
   background-color: rgba(0, 0, 0, 0.324);
 }
 
-.nav-container button:not(:last-child) {
+.nav-container button:not(:last-child), .nav-link:not(:last-child) {
   border-right: 1px solid whitesmoke;
 }

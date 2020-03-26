@@ -9,8 +9,8 @@ import Media from './media/photo-index-media';
 function App() {
   return (
     <div className="App">
-      <NavBar />
       <BrowserRouter>
+      <NavBar />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/events" component={Calendar} />
