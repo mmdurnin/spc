@@ -14,6 +14,9 @@ body {
 h1, h2, h3, h4, h5, h6, p {
   padding: .85rem;
   margin: 0;
+}
+
+h1, h2, p {
   font-family: 'Roboto', sans-serif;
 }
 
@@ -29,6 +32,19 @@ h2 {
   font-weight: 300;
 }
 
+h3 {
+  font-size: 2rem;
+  color: white;
+  font-weight: 600;
+  display: inline-block;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 200;
+  display: inline-block;
+}
+
 p {
   color: white;
   font-size: 1.0875rem;
@@ -36,6 +52,20 @@ p {
 
 section {
   padding-top: 10rem;
+}
+
+ul, li, input, textarea {
+  list-style: none;
+  background: transparent;
+  color: white;
+  padding: 0%;
+  font-size: 1.3rem;
+  border: none;
+}
+
+input {
+  background: transparent;
+  border: none;
 }
 
 button {
