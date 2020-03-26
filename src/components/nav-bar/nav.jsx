@@ -12,9 +12,9 @@ class NavBar extends React.Component {
       <div className="row nav-container">
         <Link to={"/"} className="nav-link"><button>About</button></Link>
         <button>Collaborators</button>
-        <Link to={"/Media"} className="nav-link"><button>Media</button></Link>
-        <Link to={"/Events"} className="nav-link"><button>Events</button></Link>
-        <button>Contact</button>
+        <Link to={"/media"} className="nav-link"><button>Media</button></Link>
+        <Link to={"/events"} className="nav-link"><button>Events</button></Link>
+        <Link to={"/contact"} className="nav-link"><button>Contact</button></Link>
       </div>
     )
   }

@@ -5,6 +5,7 @@ import NavBar from './nav-bar/nav';
 import Home from './home';
 import Calendar from './events/events';
 import Media from './media/photo-index-media';
+import ContactForm from './contact/contact';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/events" component={Calendar} />
           <Route exact path="/media" component={Media} />
+          <Route exact path="/contact" component={ContactForm} />
         </Switch>
       </BrowserRouter>
     </div>
