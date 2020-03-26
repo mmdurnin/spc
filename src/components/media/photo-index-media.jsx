@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../stylesheets/media.css';
+import Photo from './photo';
 
 import photo1 from '../../images/headstand_1.jpg';
 import photo2 from '../../images/headstand_2_edited.jpg';
@@ -34,8 +35,12 @@ class Media extends React.Component {
 
   render() {
     return(
-      <div className="media-index">
-        test
+      <div className="media-index photo-index">
+        {
+          this.state.photos.map((photo, idx) => {
+            return <Photo key={idx} photo={photo} />
+          })
+        }
       </div>
     )
   }

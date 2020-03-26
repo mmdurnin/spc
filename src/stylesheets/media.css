@@ -3,13 +3,16 @@
   margin: 0 auto;
   height: fit-content;
   box-sizing: border-box;
-  column-count: 4;
-  /* column-gap: 1em; */
+  column-count: 4; 
+  column-gap: 1em;
   /* padding: 1em; */
 }
 
 .media-index {
   background-color: white;
+  min-height: 100vh;
+  max-height: fit-content;
+  padding: 1em;
 }
 
 .photo-holder {
