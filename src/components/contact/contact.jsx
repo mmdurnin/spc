@@ -85,7 +85,7 @@ class ContactForm extends React.Component {
           </div>
 
           <div className="input-wrapper">
-            <input type="text" placeholder="Email" />
+            <input type="text" placeholder="Email" required />
           </div>
 
           <h4>Message</h4>
@@ -95,7 +95,7 @@ class ContactForm extends React.Component {
 
           <div className="row submit-line">
             <span className="row checkbox" onClick={this.toggleCheck}>
-              <input type="checkbox" checked={this.state.newsletter}/>
+              <input type="checkbox" checked={this.state.newsletter} onChange={() => {}}/>
               <span></span>
               <h4>Newsletter</h4>
             </span>

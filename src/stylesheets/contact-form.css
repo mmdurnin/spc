@@ -61,7 +61,7 @@
 
 .input-wrapper {
   margin: .5rem .85rem;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   border-radius: 3px;
 }
 
@@ -70,6 +70,7 @@
   width: 100%;
   max-width: 100%;
   padding: .35em 2em;
+  background-color: rgba(216, 191, 216, 0.214);
 }
 
 .checkbox, .submit-line {
@@ -116,9 +117,10 @@ input[type="checkbox"] + span {
 input[type="submit"] {
   margin: .5rem .85rem;
   width: 30%;
-  border: 2px solid white;
+  /* border: 1px solid white; */
   border-radius: 3px;
-  background-color: rgba(255, 255, 255, 0.612);
+  background-color: rgba(0, 0, 0, 0.393);
+  font-weight: 500;
 }
 
 .checkbox h4 {
@@ -129,7 +131,7 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-.input-wrapper li:hover, input:hover {
+.input-wrapper li:hover, input:hover, textarea:hover {
   background-color: rgba(27, 11, 34, 0.509);
 }
 
