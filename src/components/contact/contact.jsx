@@ -25,6 +25,8 @@ class ContactForm extends React.Component {
     this.toggleDD = this.toggleDD.bind(this)
     this.selectTopic = this.selectTopic.bind(this)
     this.toggleCheck = this.toggleCheck.bind(this)
+    this.update = this.update.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   toggleDD(e, dropdownType) {
@@ -38,14 +40,17 @@ class ContactForm extends React.Component {
     return this.toggleDD(e, "all")
   }
 
-  update(field) {
-    return e => {
-      this.setState({ [field]: e.target.value })
-    }
+  update(e, field) {
+    this.setState({ [field]: e.currentTarget.value })
   }
 
   toggleCheck() {
     this.setState({ newsletter: !this.state.newsletter })
+  }
+
+  handleSubmit(e) {
+    e.preventDefault()
+    console.log(this.state)
   }
 
   render() {
@@ -80,7 +85,7 @@ class ContactForm extends React.Component {
           <div />
         </div>
 
-        <form className="column">
+        <form className="column" onSubmit={(e) => {this.handleSubmit(e)}}>
           <h3>CONTACT US</h3>
 
           <h4>Topic</h4>
@@ -91,20 +96,20 @@ class ContactForm extends React.Component {
           <h4>Details</h4>
           <div className="row">
             <div className="input-wrapper">
-              <input type="text" placeholder="First Name" onChange={() => this.update("firstName")}/>
+              <input type="text" placeholder="First Name" onChange={(e) => this.update(e, "firstName")}/>
             </div>
             <div className="input-wrapper">
-              <input type="text" placeholder="Last Name" onChange={() => this.update("lastName")} />
+              <input type="text" placeholder="Last Name" onChange={(e) => this.update(e, "lastName")} />
             </div>
           </div>
 
           <div className="input-wrapper">
-            <input type="email" placeholder="Email" onChange={() => this.update("email")} required />
+            <input type="email" placeholder="Email" onChange={(e) => this.update(e, "email")} required />
           </div>
 
           <h4>Message</h4>
           <div className="input-wrapper">
-            <textarea required />
+            <textarea onChange={(e) => this.update(e, "message")} required />
           </div>
 
           <div className="row submit-line">
