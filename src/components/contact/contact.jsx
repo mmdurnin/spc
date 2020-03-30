@@ -50,7 +50,44 @@ class ContactForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault()
-    console.log(this.state)
+    const message = {
+      topic: this.state.topic,
+      firstName: this.state.firstName,
+      lastName: this.state.lastName,
+      email: this.state.email,
+      message: this.state.message
+    }
+    
+    fetch("http://localhost:3002/send", {
+      method: "POST",
+      body: JSON.stringify(message),
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      }
+    })
+      .then(response => response.json())
+      .then(response => {
+        if (response.status === "success") {
+          alert("Message Sent!");
+          this.resetForm();
+        } else if (response.status === "fail") {
+          alert("Message failed to send.");
+        }
+      });
+  }
+
+  resetForm() {
+    this.setState({
+      photos: imagesArray,
+      topicDD: false,
+      topic: "General",
+      firstName: "",
+      lastName: "",
+      email: "",
+      message: "",
+      newsletter: false
+    });
   }
 
   render() {
@@ -96,20 +133,20 @@ class ContactForm extends React.Component {
           <h4>Details</h4>
           <div className="row">
             <div className="input-wrapper">
-              <input type="text" placeholder="First Name" onChange={(e) => this.update(e, "firstName")}/>
+              <input type="text" placeholder="First Name" value={this.state.firstName} onChange={(e) => this.update(e, "firstName")}/>
             </div>
             <div className="input-wrapper">
-              <input type="text" placeholder="Last Name" onChange={(e) => this.update(e, "lastName")} />
+              <input type="text" placeholder="Last Name" value={this.state.lastName} onChange={(e) => this.update(e, "lastName")} />
             </div>
           </div>
 
           <div className="input-wrapper">
-            <input type="email" placeholder="Email" onChange={(e) => this.update(e, "email")} required />
+            <input type="email" placeholder="Email" value={this.state.email} onChange={(e) => this.update(e, "email")} required />
           </div>
 
           <h4>Message</h4>
           <div className="input-wrapper">
-            <textarea onChange={(e) => this.update(e, "message")} required />
+            <textarea value={this.state.message} onChange={(e) => this.update(e, "message")} required />
           </div>
 
           <div className="row submit-line">
