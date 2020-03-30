@@ -12,7 +12,15 @@ class ContactForm extends React.Component {
   constructor(props) {
     super(props)
 
-    this.state = {photos: imagesArray, topicDD: false, topic: "General", newsletter: false};
+    this.state = {photos: imagesArray, 
+                  topicDD: false, 
+                  topic: "General", 
+                  firstName: "", 
+                  lastName: "", 
+                  email: "", 
+                  message: "",
+                  newsletter: false
+                 };
 
     this.toggleDD = this.toggleDD.bind(this)
     this.selectTopic = this.selectTopic.bind(this)
@@ -28,6 +36,12 @@ class ContactForm extends React.Component {
   selectTopic(e, topic) {
     this.setState({ topic: topic })
     return this.toggleDD(e, "all")
+  }
+
+  update(field) {
+    return e => {
+      this.setState({ [field]: e.target.value })
+    }
   }
 
   toggleCheck() {
@@ -77,30 +91,30 @@ class ContactForm extends React.Component {
           <h4>Details</h4>
           <div className="row">
             <div className="input-wrapper">
-              <input type="text" placeholder="First Name"/>
+              <input type="text" placeholder="First Name" onChange={() => this.update("firstName")}/>
             </div>
             <div className="input-wrapper">
-              <input type="text" placeholder="Last Name" />
+              <input type="text" placeholder="Last Name" onChange={() => this.update("lastName")} />
             </div>
           </div>
 
           <div className="input-wrapper">
-            <input type="text" placeholder="Email" required />
+            <input type="email" placeholder="Email" onChange={() => this.update("email")} required />
           </div>
 
           <h4>Message</h4>
           <div className="input-wrapper">
-            <textarea />
+            <textarea required />
           </div>
 
           <div className="row submit-line">
             <span className="row checkbox" onClick={this.toggleCheck}>
               <input type="checkbox" checked={this.state.newsletter} onChange={() => {}}/>
-              <span></span>
+              <span>{!!this.state.newsletter ? <div className="checkmark" /> : <div className="checkmark hidden" />}</span>
               <h4>Newsletter</h4>
             </span>
 
-            <input type="submit"/>
+            <input type="submit" value="SUBMIT" />
           </div>
 
         </form>
