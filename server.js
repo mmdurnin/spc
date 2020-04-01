@@ -1,12 +1,14 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const mongoose = require('mongoose');
+const nodemailer = require("nodemailer");
 const path = require('path');
+const cors = require("cors");
+const creds1 = require("./config/email");
+const creds2 = require("./config/events");
+
 const app = express();
 const router = express.Router();
-const nodemailer = require("nodemailer");
-const cors = require("cors");
-const creds = require("./config");
-
 
 app.use(express.static(path.join(__dirname, 'build')));
 app.use(express.json());
@@ -21,8 +23,8 @@ const transport = {
   host: "smtp.gmail.com", 
   port: 587,
   auth: {
-    user: creds.USER,
-    pass: creds.PASS
+    user: creds1.USER,
+    pass: creds1.PASS
   }
 };
 
@@ -67,8 +69,8 @@ router.post("/send", (req, res, next) => {
 });
 
 
-
-app.listen(3002);
+const port = process.env.port || 3002;
+app.listen(port, () => console.log(`Server is running on port ${port}`));
 
 // const server = app.listen((8081, function () {
 //   const port = server.address().port;
