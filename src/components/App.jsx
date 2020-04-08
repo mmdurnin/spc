@@ -52,7 +52,7 @@ function App() {
         <BrowserRouter>
           <NavBar />
           <div> {state.isAuthenticated ? 
-            <div></div>
+            <EventForm />
             : <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/events" component={Calendar} />
