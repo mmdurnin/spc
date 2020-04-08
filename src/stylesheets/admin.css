@@ -1,0 +1,7 @@
+.auth-button {
+  box-sizing: border-box;
+  margin: .85em;
+  padding: .35em;
+  border: 1px solid white;
+  border-radius: 3px;
+}
