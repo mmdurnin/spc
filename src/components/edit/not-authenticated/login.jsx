@@ -1,9 +1,11 @@
 import React from 'react';
 import AuthButton from '../auth-button';
 import '../../../stylesheets/admin.css';
+import { AuthContext } from '../../App';
 
 const Login = () => {
-
+  const { dispatch } = React.useContext(AuthContext);
+  
   const initialState = {
     username: "",
     password: "",
@@ -42,11 +44,13 @@ const Login = () => {
       }
       throw res;
     }).then(resJson => {
-      dispatchEvent({
+      console.log(resJson)
+      dispatch({
         type: 'LOGIN',
         payload: resJson
       })
     }).catch(err => {
+      console.log(err)
       setData({
         ...data,
         isSubmitting: false,
