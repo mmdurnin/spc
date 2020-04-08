@@ -5,8 +5,15 @@
   padding: .35em;
   border: 1px solid white;
   border-radius: 3px;
+  width: fit-content;
 }
 
-input[type="text"], input[type="password"], .auth-button {
+input[type="text"], input[type="password"], .auth-button, .form-error {
   font-size: 32px;
+}
+
+.form-error {
+  background-color: lightcoral;
+  padding-left: 2em;
+  margin-top: .85em;
 }

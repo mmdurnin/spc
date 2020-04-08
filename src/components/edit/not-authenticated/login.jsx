@@ -57,7 +57,7 @@ const Login = () => {
 
   return(
     <div>
-      <form onSubmit={handleFormSubmit}>
+      <form onSubmit={handleFormSubmit} className="column">
         <label htmlFor="username">
           Username
           <input 
