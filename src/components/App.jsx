@@ -12,7 +12,7 @@ export const AuthContext = React.createContext();
 
 const getInitialState = {
   isAuthenticated: false,
-  user: null,
+  // user: null,
   token: null
 };
 
@@ -24,7 +24,7 @@ const reducer = (state, action) => {
       return {
         ...state,
         isAuthenticated: true,
-        user: action.payload.user,
+        // user: action.payload.user,
         token: action.payload.token
       };
     case "LOGOUT":
@@ -32,7 +32,7 @@ const reducer = (state, action) => {
       return {
         ...state,
         isAuthenticated: false,
-        user: null
+        // user: null
       };
     default:
       return state;
