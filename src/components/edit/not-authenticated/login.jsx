@@ -86,7 +86,7 @@ const Login = () => {
           <span className="form-error">{data.errorMessage}</span>
         )}
 
-        <AuthButton title={"Admin Login"} />
+        <AuthButton title={"LOGIN"} />
       </form>
     </div>
   )
