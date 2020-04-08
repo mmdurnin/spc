@@ -17,3 +17,8 @@ input[type="text"], input[type="password"], .auth-button, .form-error {
   padding-left: 2em;
   margin-top: .85em;
 }
+
+.white {
+  color: white;
+  background: red;
+}

@@ -10,11 +10,17 @@ import Login from './edit/not-authenticated/login';
 import EventForm from './edit/authenticated/add-event-form';
 export const AuthContext = React.createContext();
 
-const initialState = {
-  isAuthenticated: false,
-  // user: null,
-  token: null
-};
+const initialState = (!!localStorage.token) ? 
+  {
+    isAuthenticated: true,
+    token: localStorage.token
+  }
+  :
+  {
+    isAuthenticated: false,
+    // user: null,
+    token: null
+  } 
 
 const reducer = (state, action) => {
   switch(action.type) {
@@ -41,6 +47,8 @@ const reducer = (state, action) => {
 
 function App() {
   const [state, dispatch] = React.useReducer(reducer, initialState);
+  console.log(state)
+  console.log(localStorage.token)
   return (
     <div className="App">
       <AuthContext.Provider

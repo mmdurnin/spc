@@ -1,4 +1,6 @@
-import React from 'react';
+import React from "react";
+import { AuthContext } from "../../App";
+import '../../../stylesheets/admin.css';
 
 class EventForm extends React.Component {
   constructor(props) {
@@ -7,7 +9,7 @@ class EventForm extends React.Component {
 
   render() {
     return(
-      <div></div>
+      <div className="white">authorized</div>
     )
   }
 }
