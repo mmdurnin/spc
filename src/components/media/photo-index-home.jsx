@@ -21,7 +21,7 @@ function PhotoIndex() {
       <div className="photo-index row">
         {
            photosArray.map((photo, idx) => {
-             return <Link to={"/media"} className="photo-holder" ><Photo key={idx} photo={photo} /></Link>
+             return <Link key={idx} to={"/media"} className="photo-holder" ><Photo key={idx} photo={photo} /></Link>
            })
         }
       </div>
