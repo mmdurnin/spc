@@ -49,7 +49,7 @@ const Login = () => {
       setData({
         ...data,
         isSubmitting: false,
-        errorMessage: error.message || error.statusText
+        errorMessage: err.message || err.statusText
       });
     });
   };

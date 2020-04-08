@@ -10,7 +10,7 @@ import Login from './edit/not-authenticated/login';
 import EventForm from './edit/authenticated/add-event-form';
 export const AuthContext = React.createContext();
 
-const getInitialState = {
+const initialState = {
   isAuthenticated: false,
   // user: null,
   token: null

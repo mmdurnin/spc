@@ -7,7 +7,7 @@ function About() {
   return (
     <section>
       <div className="row">
-        <ScrollAnimation animateIn="fadeInLeft" duration="1">
+        <ScrollAnimation animateIn="fadeInLeft" duration={1}>
           <h2 id="hip-hop">
             <strong>H</strong>EALTHY <br />
             <strong>I</strong>NDEPENDENT <br />
