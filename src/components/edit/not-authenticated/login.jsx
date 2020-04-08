@@ -9,7 +9,9 @@ const Login = () => {
     isSubmitting: false,
     errorMessage: null
   };
+
   const [data, setData] = React.useState(initialState);
+
   const handleInputChange = event => {
     setData({
       ...data,
@@ -17,9 +19,44 @@ const Login = () => {
     });
   };
 
+  const handleFormSubmit = event => {
+    event.preventDefault();
+    setData({
+      ...data,
+      isSubmitting: true,
+      errorMessage: null
+    });
+    fetch('http://localhost:3002/api/login', {
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        username: data.username,
+        password: data.password
+      })
+    }).then(res => {
+      if (res.ok) {
+        return res.json()
+      }
+      throw res;
+    }).then(resJson => {
+      dispatchEvent({
+        type: 'LOGIN',
+        payload: resJson
+      })
+    }).catch(err => {
+      setData({
+        ...data,
+        isSubmitting: false,
+        errorMessage: error.message || error.statusText
+      });
+    });
+  };
+
   return(
     <div>
-      <form>
+      <form onSubmit={handleFormSubmit}>
         <label htmlFor="username">
           Username
           <input 
@@ -45,7 +82,7 @@ const Login = () => {
         {data.errorMessage && (
           <span className="form-error">{data.errorMessage}</span>
         )}
-        
+
         <AuthButton title={"Admin Login"} />
       </form>
     </div>
