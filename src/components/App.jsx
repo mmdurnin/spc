@@ -9,47 +9,60 @@ import ContactForm from './contact/contact';
 import Login from './edit/not-authenticated/login'
 export const AuthContext = React.createContext();
 
-// const getInitialState = {
-//   isAuthenticated: false,
-//   user: null,
-//   token: null
-// };
-// const reducer = (state, action) => {
-//   switch(action.type) {
-//     case "LOGIN":
-//       localStorage.setItem("user", JSON.stringify(action.payload.user));
-//       localStorage.setItem("token", JSON.stringify(action.payload.token));
-//       return {
-//         ...state,
-//         isAuthenticated: true,
-//         user: action.payload.user,
-//         token: action.payload.token
-//       };
-//     case "LOGOUT":
-//       localStorage.clear();
-//       return {
-//         ...state,
-//         isAuthenticated: false,
-//         user: null
-//       };
-//     default:
-//       return state;
-//   }
-// }
+const getInitialState = {
+  isAuthenticated: false,
+  user: null,
+  token: null
+};
+
+const reducer = (state, action) => {
+  switch(action.type) {
+    case "LOGIN":
+      // localStorage.setItem("user", JSON.stringify(action.payload.user));
+      localStorage.setItem("token", JSON.stringify(action.payload.token));
+      return {
+        ...state,
+        isAuthenticated: true,
+        user: action.payload.user,
+        token: action.payload.token
+      };
+    case "LOGOUT":
+      localStorage.clear();
+      return {
+        ...state,
+        isAuthenticated: false,
+        user: null
+      };
+    default:
+      return state;
+  }
+}
 
 function App() {
+  const [state, dispatch] = React.useReducer(reducer, initialState);
   return (
     <div className="App">
-      <BrowserRouter>
-      <NavBar />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/events" component={Calendar} />
-          <Route exact path="/media" component={Media} />
-          <Route exact path="/contact" component={ContactForm} />
-          <Route exact path="/admin-login" component={Login} />
-        </Switch>
-      </BrowserRouter>
+      <AuthContext.Provider
+        value={{
+          state,
+          dispatch,
+        }}
+      >
+        <BrowserRouter>
+          <NavBar />
+          <div> {state.isAuthenticated ? 
+            <div></div>
+            : <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/events" component={Calendar} />
+              <Route exact path="/media" component={Media} />
+              <Route exact path="/contact" component={ContactForm} />
+              <Route exact path="/admin-login" component={Login} />
+            </Switch>
+          }
+          </div>
+        </BrowserRouter>
+      </AuthContext.Provider>
     </div>
   );
 }
