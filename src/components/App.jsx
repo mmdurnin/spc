@@ -6,8 +6,9 @@ import Home from './home';
 import Calendar from './events/events';
 import Media from './media/photo-index-media';
 import ContactForm from './contact/contact';
+import Login from './edit/not-authenticated/login'
+export const AuthContext = React.createContext();
 
-// export const AuthContext = React.createContext();
 // const getInitialState = {
 //   isAuthenticated: false,
 //   user: null,
@@ -46,6 +47,7 @@ function App() {
           <Route exact path="/events" component={Calendar} />
           <Route exact path="/media" component={Media} />
           <Route exact path="/contact" component={ContactForm} />
+          <Route exact path="/admin-login" component={Login} />
         </Switch>
       </BrowserRouter>
     </div>
