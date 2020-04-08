@@ -6,7 +6,8 @@ import Home from './home';
 import Calendar from './events/events';
 import Media from './media/photo-index-media';
 import ContactForm from './contact/contact';
-import Login from './edit/not-authenticated/login'
+import Login from './edit/not-authenticated/login';
+import EventForm from './edit/authenticated/add-event-form';
 export const AuthContext = React.createContext();
 
 const getInitialState = {
