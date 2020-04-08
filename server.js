@@ -29,7 +29,10 @@ app.post("/api/login", (req, res) => {
     const accessToken = jwt.sign({ username: username }, process.env.SECRET);
     res.json({ accessToken });
   } else {
-    res.send("Invalid Credentials");
+    console.log("invalid credentials")
+    res.status(401).send({
+      message: "Invalid Credentials"
+    })
   }
 });
 

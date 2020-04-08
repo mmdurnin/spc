@@ -1,5 +1,6 @@
 import React from 'react';
 import AuthButton from '../auth-button';
+import '../../../stylesheets/admin.css';
 
 const Login = () => {
 
@@ -63,6 +64,7 @@ const Login = () => {
             type="text"
             name="username"
             id="username"
+            placeholder="USERNAME"
             value={data.username}
             onChange={handleInputChange}
           />
@@ -74,6 +76,7 @@ const Login = () => {
             type="password"
             name="password"
             id="password"
+            placeholder="PASSWORD"
             value={data.password}
             onChange={handleInputChange}
           />
