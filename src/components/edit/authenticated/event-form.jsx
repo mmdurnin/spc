@@ -16,7 +16,7 @@ class EventForm extends React.Component {
         <EditableEvents />
         <div className="column">
           <AddEventForm />
-          <AuthButton />
+          <AuthButton title={"LOGOUT"} />
         </div>
       </div>
     )
