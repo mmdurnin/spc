@@ -1,6 +1,6 @@
 import React from 'react';
 
-class EditableEvents extends React.Component {
+class AddEventForm extends React.Component {
   constructor(props) {
     super(props)
   }
@@ -12,4 +12,4 @@ class EditableEvents extends React.Component {
   }
 }
 
-export default EditableEvents;
+export default AddEventForm;

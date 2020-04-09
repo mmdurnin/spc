@@ -1,5 +1,8 @@
 import React from "react";
 import { AuthContext } from "../../App";
+import AddEventForm from './add-event';
+import EditableEvents from './editable-events';
+import AuthButton from '../auth-button';
 import '../../../stylesheets/admin.css';
 
 class EventForm extends React.Component {
@@ -9,7 +12,13 @@ class EventForm extends React.Component {
 
   render() {
     return(
-      <div className="white">authorized</div>
+      <div className="row">
+        <EditableEvents />
+        <div className="column">
+          <AddEventForm />
+          <AuthButton />
+        </div>
+      </div>
     )
   }
 }
