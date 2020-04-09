@@ -9,7 +9,6 @@ const EventForm = () => {
   const { dispatch } = React.useContext(AuthContext);
 
   const handleLogout = () => {
-    console.log("handle logout")
     dispatch({
       type: 'LOGOUT'
     })
