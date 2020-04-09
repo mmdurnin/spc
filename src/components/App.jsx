@@ -10,17 +10,18 @@ import Login from './edit/not-authenticated/login';
 import EventForm from './edit/authenticated/add-event-form';
 export const AuthContext = React.createContext();
 
-const initialState = (!!localStorage.token) ? 
+let initialState = (localStorage.token) ?
   {
     isAuthenticated: true,
-    token: localStorage.token
+    // user: null,
+    token: localStorage.getItem("token")
   }
   :
   {
     isAuthenticated: false,
     // user: null,
     token: null
-  } 
+  }
 
 const reducer = (state, action) => {
   switch(action.type) {
@@ -31,7 +32,7 @@ const reducer = (state, action) => {
         ...state,
         isAuthenticated: true,
         // user: action.payload.user,
-        token: action.payload.token
+        token: action.payload.accessToken
       };
     case "LOGOUT":
       localStorage.clear();
