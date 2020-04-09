@@ -5,22 +5,25 @@ import EditableEvents from './editable-events';
 import AuthButton from '../auth-button';
 import '../../../stylesheets/admin.css';
 
-class EventForm extends React.Component {
-  constructor(props) {
-    super(props)
+const EventForm = () => {
+  const { dispatch } = React.useContext(AuthContext);
+
+  const handleLogout = () => {
+    console.log("handle logout")
+    dispatch({
+      type: 'LOGOUT'
+    })
   }
 
-  render() {
-    return(
-      <div className="row">
-        <EditableEvents />
-        <div className="column">
-          <AddEventForm />
-          <AuthButton title={"LOGOUT"} />
-        </div>
+  return (
+    <div className="row">
+      <EditableEvents />
+      <div className="column">
+        <AddEventForm />
+        <AuthButton title={"LOGOUT"} operation={handleLogout} />
       </div>
-    )
-  }
+    </div>
+  );
 }
 
 export default EventForm;

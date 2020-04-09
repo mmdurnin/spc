@@ -2,8 +2,13 @@ import React from 'react';
 import '../../stylesheets/admin.css';
 
 const AuthButton = (props) => {
+
+  const handleOperation = () => {
+    if (props.operation) props.operation()
+  }
+  
   return(
-    <button className="auth-button">{props.title}</button>
+    <button onClick={handleOperation} className="auth-button">{props.title}</button>
   )
 }
 

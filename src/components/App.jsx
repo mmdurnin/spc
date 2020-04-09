@@ -36,6 +36,7 @@ const reducer = (state, action) => {
       };
     case "LOGOUT":
       localStorage.clear();
+      console.log("logging out")
       return {
         ...state,
         isAuthenticated: false,
@@ -48,8 +49,6 @@ const reducer = (state, action) => {
 
 function App() {
   const [state, dispatch] = React.useReducer(reducer, initialState);
-  console.log(state)
-  console.log(localStorage.token)
   return (
     <div className="App">
       <AuthContext.Provider
