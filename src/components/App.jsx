@@ -7,7 +7,7 @@ import Calendar from './events/events';
 import Media from './media/photo-index-media';
 import ContactForm from './contact/contact';
 import Login from './edit/not-authenticated/login';
-import EventForm from './edit/authenticated/add-event-form';
+import EventForm from './edit/authenticated/event-form';
 export const AuthContext = React.createContext();
 
 let initialState = (localStorage.token) ?
