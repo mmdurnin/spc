@@ -1,0 +1,7 @@
+.event {
+  width: 80vw;
+  min-height: 20vh;
+  border: 1px solid fuchsia;
+  border-radius: 3px;
+  margin: .85em auto;
+}

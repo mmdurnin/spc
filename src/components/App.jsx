@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import '../App.css';
 import NavBar from './nav-bar/nav';
 import Home from './home';
-import Calendar from './events/events';
+import Events from './events/events';
 import Media from './media/photo-index-media';
 import ContactForm from './contact/contact';
 import Login from './edit/not-authenticated/login';
@@ -63,7 +63,7 @@ function App() {
             <EventForm />
             : <Switch>
               <Route exact path="/" component={Home} />
-              <Route exact path="/events" component={Calendar} />
+              <Route exact path="/events" component={Events} />
               <Route exact path="/media" component={Media} />
               <Route exact path="/contact" component={ContactForm} />
               <Route exact path="/admin-login" component={Login} />
