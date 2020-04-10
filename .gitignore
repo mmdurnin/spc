@@ -27,3 +27,4 @@ events.js
 
 notes
 .env
+event_db.json

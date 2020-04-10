@@ -11,6 +11,7 @@ if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
 }
 
+// config/ middleware
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
@@ -22,6 +23,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
+// auth
 app.post("/api/login", (req, res) => {
   let { username, password } = req.body;
 
@@ -37,8 +39,27 @@ app.post("/api/login", (req, res) => {
   }
 });
 
-app.use("/", router);
+// database 
+const admin = require("firebase-admin");
+const serviceAccount = require("./event_db.json");
 
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://events-f9e2b.firebaseio.com",
+});
+
+const db = admin.database();
+const ref = db.ref("/events");
+
+ref.once("value", function (snapshot) {
+  var data = snapshot.val(); //Data is in JSON format.
+  console.log("reading from db")
+  console.log(data);
+  console.log("finished reading")
+});
+
+// email
+app.use("/", router);
 
 const transport = {
   host: "smtp.gmail.com", 
