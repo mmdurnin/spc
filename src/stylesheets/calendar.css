@@ -1,7 +1,47 @@
+.events-background-black {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(90deg, black 0%, black 50%, rgba(68, 61, 167, 0.947) 70%, rgba(182, 132, 248, 0.358) 80%);
+}
+
+.events-background-photo {
+  position: fixed;
+  z-index: -1;
+  height: 100vh;
+  right: 0px;
+  top: 0px;
+  width: auto;
+  object-fit: cover;
+}
+
 .event {
+  position: relative;
+  box-sizing: border-box;
   width: 80vw;
-  min-height: 20vh;
-  border: 1px solid fuchsia;
+  height: 40vh;
+  /* border: 1px soli d white; */
   border-radius: 3px;
-  margin: .85em auto;
+  margin: 2em auto;
+  background-color: rgba(255, 255, 255, 0.255);
+}
+
+.event-image-frame {
+  position: relative;
+  box-sizing: border-box;
+  padding: .85em;
+  height: 100%;
+  width: fit-content;
+  margin: auto;
+}
+
+.event img {
+  box-sizing: border-box;
+  height: inherit;
+  width: auto;
+  /* border: 1px solid white; */
+  padding: .05em;
+  object-fit: cover;
 }
