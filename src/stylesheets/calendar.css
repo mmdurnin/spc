@@ -20,7 +20,7 @@
 .event {
   position: relative;
   box-sizing: border-box;
-  width: 80vw;
+  width: 80%;
   /* height: fit-content; */
   border-radius: 3px;
   margin: 2em auto;
