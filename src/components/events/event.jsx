@@ -17,7 +17,7 @@ const Event = (props) => {
           <div className="row">
             <h4>{props.eventDetails.event_date}</h4>
             <h4>|</h4>
-            <h4>{props.eventDetails.venue_name.toUpperCase()}</h4>
+            {(props.eventDetails.venue_name) ? <h4>{props.eventDetails.venue_name.toUpperCase()}</h4> : null}
           </div>
         </div>
 
@@ -29,7 +29,7 @@ const Event = (props) => {
             {button}
           </div>
         </div>
-        
+
       </div>
     </ScrollAnimation>
   );

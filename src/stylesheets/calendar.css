@@ -102,3 +102,12 @@
   text-decoration: none;
   color: white;
 }
+
+
+form label {
+  color: white;
+}
+
+form p {
+  font-style: italic;
+}
