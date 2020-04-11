@@ -11,10 +11,12 @@ const Event = (props) => {
 
   return (
     <ScrollAnimation animateIn="zoomIn" duration={1}>
-      <div className="event">
+      <div className="event column">
         <h1>{props.eventDetails.event_name}</h1>
-        {/* <div className="event-image-frame">{image}</div> */}
-        {button}
+        <div className="row">
+          <div className="event-image-frame">{image}</div>
+          {button}
+        </div>
       </div>
     </ScrollAnimation>
   );
