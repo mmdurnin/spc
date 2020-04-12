@@ -83,6 +83,13 @@ app.post("/api/admin/events", function(req, res) {
   })
 })
 
+app.delete("/api/admin/events", function(req, res) {
+  const ref = db.ref("/events")
+  ref.child(req.body.id).remove()
+    .then(() => res.status(200).send({ message: "successfully removed" }))
+    .catch((err) => res.status(418).send({ message: err }))
+})
+
 // email
 app.use("/", router);
 

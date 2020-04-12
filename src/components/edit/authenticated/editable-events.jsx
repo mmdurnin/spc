@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Event from '../../events/event';
-import { fetchEvents } from '../../../util/api-util';
+import { fetchEvents, removeEvent } from "../../../util/api-util";
 
 const EditableEvents = () => {
   const [events, setEvents] = useState([])
@@ -15,7 +15,7 @@ const EditableEvents = () => {
   if (events) eventKeys = Object.keys(events);
 
   const deleteEvent = (id) => {
-    console.log(id)
+    removeEvent({ id: id })
   }
 
   return(
