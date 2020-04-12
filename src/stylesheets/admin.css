@@ -3,9 +3,14 @@
   margin: .85em;
   margin-left: 2em;
   padding: .35em;
-  border: 1px solid white;
+  border: 2px solid white;
   border-radius: 3px;
   width: fit-content;
+  margin-left: 90%;
+  /* z-index: 1;
+  position: fixed;
+  right: 5%;
+  bottom: 20px; */
 }
 
 input[type="text"], input[type="password"], .auth-button, .form-error {
