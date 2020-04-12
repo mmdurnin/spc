@@ -19,7 +19,7 @@ const EditableEvents = () => {
   }
 
   return(
-    <div>
+    <div className="editable-events">
       {
         !events
         ? null

@@ -94,26 +94,26 @@ form .scroll {
   font-weight: 900;
 }
 
-.event-left {
+.editable-events .event-left {
   width: 15vw;
 }
 
-.event-left h4 {
+.editable-events .event-left h4 {
   font-size: .75rem;
 }
 
-.event-right h1 {
+.editable-events .event-right h1 {
   font-size: 3vh;
 }
 
-.event-right p {
+.editable-events .event-right p {
   font-size: 12px;
 }
 
-.event-right h5 {
+.editable-events .event-right h5 {
   font-size: 1vh;
 }
 
-.event button {
+.editable-events .event button {
   font-size: 10px;
 }
