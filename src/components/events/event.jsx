@@ -10,7 +10,7 @@ const Event = (props) => {
     : null;
 
   return (
-    <ScrollAnimation animateIn="zoomIn" duration={1}>
+    <ScrollAnimation className="scroll" animateIn="zoomIn" duration={1}>
       <div className="event row">
 
         <div className="event-left">

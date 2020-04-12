@@ -67,9 +67,14 @@ form p {
   margin: .35em;
 }
 
-form .row {
+form .column {
+  position: relative;
   justify-content: center;
   align-items: center;
+}
+
+form .scroll {
+  width: 70%;
 }
 
 /* event listings */

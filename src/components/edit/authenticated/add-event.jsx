@@ -57,122 +57,135 @@ class AddEventForm extends React.Component {
       venue_address: this.state.venue_address,
       venue_name: this.state.venue_name,
     };
-    return(
+    return (
       <div className="column add-event">
         <h2>ADD AN EVENT</h2>
-        <form onSubmit={e => this.createEvent(e, eventDetails)}>
-          <label >
+        <form onSubmit={(e) => this.createEvent(e, eventDetails)}>
+          <label>
             Event Name:
-            <input 
+            <input
               type="text"
               name="event_name"
               value={this.state.event_name}
               onChange={(e) => this.update(e, "event_name")}
             />
           </label>
-          <br/>
-          <br/>
-          <label >
+          <br />
+          <br />
+          <label>
             Venue Name:
-            <input 
+            <input
               type="text"
               name="venue_name"
               value={this.state.venue_name}
               onChange={(e) => this.update(e, "venue_name")}
             />
           </label>
-          <br/>
-          <br/>
-          <label >
+          <br />
+          <br />
+          <label>
             Venue Address:
-            <input 
+            <input
               type="text"
               name="venue_address"
               value={this.state.venue_address}
               onChange={(e) => this.update(e, "venue_address")}
             />
           </label>
-          <br/>
-          <br/>
-          <label >
-            Event Date: 
+          <br />
+          <br />
+          <label>
+            Event Date:
             <p>format: "April 27 2010, 5:00PM"</p>
-            <input 
+            <input
               type="text"
               name="event_date"
               value={this.state.event_date}
               onChange={(e) => this.update(e, "event_date")}
             />
           </label>
-          <br/>
-          <br/>
-          <label >
+          <br />
+          <br />
+          <label>
             Event Description:
-            <input 
+            <input
               type="text"
               name="event_description"
               value={this.state.event_description}
               onChange={(e) => this.update(e, "event_description")}
             />
           </label>
-          <br/>
-          <br/>
-          <label >
+          <br />
+          <br />
+          <label>
             Image Source:
-            <input 
+            <input
               type="text"
               name="img_src"
               value={this.state.img_src}
               onChange={(e) => this.update(e, "img_src")}
             />
           </label>
-          <br/>
-          <br/>
-          <label >
+          <br />
+          <br />
+          <label>
             Notes:
             <p>Example: "Doors open at 8:00", "Buy tickets at the door"</p>
-            <input 
+            <input
               type="text"
               name="notes"
               value={this.state.notes}
               onChange={(e) => this.update(e, "notes")}
             />
           </label>
-          <br/>
-          <br/>
-          <label >
+          <br />
+          <br />
+          <label>
             URL:
             <p>This is what the button will link to</p>
-            <p>For linking another site (e.g., buying tickets, venue website, etc)</p>
-            <p>MUST start with http or https (go to the website and copy paste)</p>
-            <input 
+            <p>
+              For linking another site (e.g., buying tickets, venue website,
+              etc)
+            </p>
+            <p>
+              MUST start with http or https (go to the website and copy paste)
+            </p>
+            <input
               type="text"
               name="url"
               value={this.state.url}
               onChange={(e) => this.update(e, "url")}
             />
           </label>
-          <br/>
-          <br/>
-          <label >
+          <br />
+          <br />
+          <label>
             Link Name:
-            <p>The name of the button (e.g., "Purchase Tickets", "Venue Site"</p>
+            <p>
+              The name of the button (e.g., "Purchase Tickets", "Venue Site"
+            </p>
             <p>(Keep it short so the button doesn't look weird)</p>
-            <input 
+            <input
               type="text"
               name="url_name"
               value={this.state.url_name}
               onChange={(e) => this.update(e, "url_name")}
             />
           </label>
-          <br/>
-          <br/>
+          <br />
+          <br />
           <label>
-            <p>The event needs a unique key to be stored in the database. Give it the event date + time in this format:</p>
+            <p>
+              The event needs a unique key to be stored in the database. Give it
+              the event date + time in this format:
+            </p>
             <p>April 27, 2009, 3:00PM = 0427091500</p>
             <p>December 25, 2021, 9:30AM = 1225210930</p>
-            <p>(I'm also using this key to arrange the events in order, so make sure to stick with the format -- it should be 10 digits)</p>
-            <input 
+            <p>
+              (I'm also using this key to arrange the events in order, so make
+              sure to stick with the format -- it should be 10 digits)
+            </p>
+            <input
               type="text"
               name="event_key"
               value={this.state.event_key}
@@ -180,14 +193,14 @@ class AddEventForm extends React.Component {
             />
           </label>
 
-          <div className="row">
+          <div className="column">
+            <h3>Sample Event Post:</h3>
             <Event eventDetails={eventDetails} />
-            <input type="submit" value="ADD EVENT"/>
+            <input type="submit" value="ADD EVENT" />
           </div>
         </form>
-
       </div>
-    )
+    );
   }
 }
 
