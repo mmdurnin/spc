@@ -59,6 +59,7 @@ class AddEventForm extends React.Component {
     };
     return(
       <div className="column add-event">
+        <h2>ADD AN EVENT</h2>
         <form onSubmit={e => this.createEvent(e, eventDetails)}>
           <label >
             Event Name:

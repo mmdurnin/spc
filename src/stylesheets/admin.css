@@ -1,12 +1,11 @@
+/* auth */
 .auth-button {
   box-sizing: border-box;
-  margin: .85em;
-  margin-left: 2em;
+  margin: auto;
   padding: .35em;
   border: 2px solid white;
   border-radius: 3px;
   width: fit-content;
-  margin-left: 90%;
   /* z-index: 1;
   position: fixed;
   right: 5%;
@@ -31,12 +30,23 @@ input[type="submit"] {
   margin-top: .85em;
 }
 
+/* add event */
+
 .event-form {
   width: 100%;
 }
 
+.add-event input[type="text"] {
+  background: rgba(255, 255, 255, 0.509);
+}
+
 .event-form-right {
+  box-sizing: border-box;
   width: 100%;
+  margin: 2em;
+  padding: .85em;
+  border: 3px solid white;
+  border-radius: 3px;
 }
 
 .add-event {
@@ -46,6 +56,7 @@ input[type="submit"] {
 
 form label {
   color: white;
+  font-size: 3vh;
 }
 
 form p {
@@ -57,4 +68,30 @@ form p {
 form .row {
   justify-content: center;
   align-items: center;
+}
+
+/* event listings */
+
+.event-left {
+  width: 15vw;
+}
+
+.event-left h4 {
+  font-size: .75rem;
+}
+
+.event-right h1 {
+  font-size: 3vh;
+}
+
+.event-right p {
+  font-size: 12px;
+}
+
+.event-right h5 {
+  font-size: 1vh;
+}
+
+.event button {
+  font-size: 10px;
 }
