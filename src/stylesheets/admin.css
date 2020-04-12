@@ -79,6 +79,21 @@ form .scroll {
 
 /* event listings */
 
+#deleteButton {
+  box-sizing: border-box;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 20px;
+  height: 20px;
+  padding: .05em;
+  border: 2px solid white;
+  background: lightcoral;
+  color: white;
+  font-size: 12px;
+  font-weight: 900;
+}
+
 .event-left {
   width: 15vw;
 }

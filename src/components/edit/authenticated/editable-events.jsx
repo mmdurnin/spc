@@ -14,9 +14,9 @@ const EditableEvents = () => {
   let eventKeys;
   if (events) eventKeys = Object.keys(events);
 
-  const deleteEvent = () => {}
-
-  const deleteButton = <button onClick={e => deleteEvent(e)}>Delete Event</button>
+  const deleteEvent = (id) => {
+    console.log(id)
+  }
 
   return(
     <div>
@@ -24,7 +24,7 @@ const EditableEvents = () => {
         !events
         ? null
         : eventKeys.map((key, idx) => {
-          return <Event key={idx} button={deleteButton} track={key} eventDetails={events[key]} />;
+          return <Event key={idx} deleteEvent={deleteEvent} track={key} eventDetails={events[key]} />;
         })
       }
     </div>
