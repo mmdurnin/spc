@@ -19,12 +19,14 @@ class AddEventForm extends React.Component {
       event_key: ""
     }
 
+    this.initialState = this.state;
+
     this.update = this.update.bind(this)
+    this.createEvent = this.createEvent.bind(this)
   }
 
+
   update(e, field) {
-    console.log(e.target.value)
-    console.log(field)
     this.setState({ [field]: e.target.value })
   }
 
@@ -35,6 +37,12 @@ class AddEventForm extends React.Component {
       eventData: eventObject
     }
     addEvent(eventItem)
+      .then(res => {
+        console.log(res)
+        alert(res.message)
+        this.setState(this.initialState)
+      })
+      .catch(err => alert(err.message))
   }
 
   render() {

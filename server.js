@@ -75,7 +75,7 @@ app.post("/api/admin/events", function(req, res) {
   const ref = db.ref(`/events/${req.body.eventId}`)
   ref.set(req.body.eventData, function(error) {
     if (error) {
-      res.send({ message: "Unable to create event" })
+      res.status(418).send({ message: "Unable to create event" })
     } else {
       console.log("success!!!")
       res.status(200).send({ message: "Successfully added to events db"})
