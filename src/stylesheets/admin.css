@@ -1,7 +1,7 @@
 /* auth */
 .auth-button {
   box-sizing: border-box;
-  margin: auto;
+  margin: 2rem auto;
   padding: .35em;
   border: 2px solid white;
   border-radius: 3px;
@@ -94,26 +94,26 @@ form .scroll {
   font-weight: 900;
 }
 
-.editable-events .event-left {
+.editable-events .event-left, form .event-left {
   width: 15vw;
 }
 
-.editable-events .event-left h4 {
+.editable-events .event-left h4, form .event-left h4 {
   font-size: .75rem;
 }
 
-.editable-events .event-right h1 {
+.editable-events .event-right h1, form .event-right h1 {
   font-size: 3vh;
 }
 
-.editable-events .event-right p {
+.editable-events .event-right p, form .event-right p {
   font-size: 12px;
 }
 
-.editable-events .event-right h5 {
+.editable-events .event-right h5, form .event-right h5  {
   font-size: 1vh;
 }
 
-.editable-events .event button {
+.editable-events .event button, form .event button {
   font-size: 10px;
 }
