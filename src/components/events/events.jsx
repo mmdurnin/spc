@@ -24,7 +24,7 @@ const Events = () => {
         {!events
           ? null
           : eventKeys.map((key, idx) => {
-              return <Event key={idx} track={idx} eventDetails={events[key]} />;
+              return <Event key={idx} track={key} eventDetails={events[key]} />;
             })}
       </div>
     </div>

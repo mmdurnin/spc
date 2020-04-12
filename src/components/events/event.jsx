@@ -3,6 +3,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 const Event = (props) => {
 
+  const deleteButton = props.button ? props.button : null;
   const image = (props.eventDetails.img_src) ? <img src={props.eventDetails.img_src} /> : null;
   const button = (props.eventDetails.url && props.eventDetails.url_name) ? 
     <a target="_blank" href={props.eventDetails.url}><button>{props.eventDetails.url_name}</button></a>
