@@ -1,5 +1,6 @@
 import React from 'react';
 import Event from "../../events/event";
+import { addEvent } from '../../../util/api-util';
 import '../../../stylesheets/calendar.css';
 
 class AddEventForm extends React.Component {
@@ -27,6 +28,15 @@ class AddEventForm extends React.Component {
     this.setState({ [field]: e.target.value })
   }
 
+  createEvent(e, eventObject) {
+    e.preventDefault();
+    const eventItem = {
+      eventId: this.state.event_key,
+      eventData: eventObject
+    }
+    addEvent(eventItem)
+  }
+
   render() {
     const eventDetails = {
       event_date: this.state.event_date,
@@ -41,7 +51,7 @@ class AddEventForm extends React.Component {
     };
     return(
       <div className="column add-event">
-        <form>
+        <form onSubmit={e => this.createEvent(e, eventDetails)}>
           <label >
             Event Name:
             <input 
@@ -163,7 +173,7 @@ class AddEventForm extends React.Component {
 
           <div className="row">
             <Event eventDetails={eventDetails} />
-            <input type="submit" value="ADD EVENT TO CALENDAR"/>
+            <input type="submit" value="ADD EVENT"/>
           </div>
         </form>
 

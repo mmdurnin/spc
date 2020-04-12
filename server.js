@@ -39,6 +39,7 @@ app.post("/api/login", (req, res) => {
 });
 
 app.use("/api/admin", function (req, res, next) {
+  console.log("middleware is verifying token")
   const token = req.get("token");
   if (token !== process.env.ACCESSTOKEN) {
     res.status(401).send({ message: "Not Authorized" });
@@ -58,12 +59,27 @@ admin.initializeApp({
 });
 
 const db = admin.database();
-const ref = db.ref("/events");
+
 
 app.get("/api/events", function(req, res) {
+  const ref = db.ref("/events");
   ref.once("value", function(snapshot) {
     var data = snapshot.val();
     res.send(data)
+  })
+})
+
+app.post("/api/admin/events", function(req, res) {
+  console.log("requesting an add to db")
+  console.log(req.body)
+  const ref = db.ref(`/events/${req.body.eventId}`)
+  ref.set(req.body.eventData, function(error) {
+    if (error) {
+      res.send({ message: "Unable to create event" })
+    } else {
+      console.log("success!!!")
+      res.status(200).send({ message: "Successfully added to events db"})
+    }
   })
 })
 

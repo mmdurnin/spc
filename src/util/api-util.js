@@ -8,6 +8,7 @@ export const fetchEvents = () => {
 }
 
 export const addEvent = (event) => {
+  console.log(event)
   return $.ajax({
     url: 'http://localhost:3002/api/admin/events',
     method: 'POST',
