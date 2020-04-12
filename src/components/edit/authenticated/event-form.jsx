@@ -15,9 +15,9 @@ const EventForm = () => {
   }
 
   return (
-    <div className="row">
+    <div className="row event-form">
       <EditableEvents />
-      <div className="column">
+      <div className="column event-form-right">
         <AddEventForm />
         <AuthButton title={"LOGOUT"} operation={handleLogout} />
       </div>

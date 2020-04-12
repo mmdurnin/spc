@@ -12,8 +12,44 @@ input[type="text"], input[type="password"], .auth-button, .form-error {
   font-size: 32px;
 }
 
+input[type="submit"] {
+  padding: .85em;
+  height: fit-content;
+  width: fit-content;
+  color: white;
+  background: lightcoral;
+}
+
 .form-error {
   background-color: lightcoral;
   padding-left: 2em;
   margin-top: .85em;
+}
+
+.event-form {
+  width: 100%;
+}
+
+.event-form-right {
+  width: 100%;
+}
+
+.add-event {
+  width: 100%;
+}
+
+
+form label {
+  color: white;
+}
+
+form p {
+  font-style: italic;
+  padding: 0px;
+  margin: .35em;
+}
+
+form .row {
+  justify-content: center;
+  align-items: center;
 }
