@@ -7,7 +7,8 @@ import Events from './events/events';
 import Media from './media/photo-index-media';
 import ContactForm from './contact/contact';
 import Login from './edit/not-authenticated/login';
-import EventForm from './edit/authenticated/event-form';
+// import EventForm from './edit/authenticated/event-form';
+import AuthMain from './edit/authenticated/main';
 export const AuthContext = React.createContext();
 
 let initialState = (localStorage.token) ?
@@ -61,7 +62,7 @@ function App() {
           <div>
             {" "}
             {state.isAuthenticated ? (
-              <EventForm />
+              <AuthMain />
             ) : (
               <div>
                 <NavBar />
