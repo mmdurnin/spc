@@ -58,17 +58,22 @@ function App() {
         }}
       >
         <BrowserRouter>
-          <NavBar />
-          <div> {state.isAuthenticated ? 
-            <EventForm />
-            : <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/events" component={Events} />
-              <Route exact path="/media" component={Media} />
-              <Route exact path="/contact" component={ContactForm} />
-              <Route exact path="/admin-login" component={Login} />
-            </Switch>
-          }
+          <div>
+            {" "}
+            {state.isAuthenticated ? (
+              <EventForm />
+            ) : (
+              <div>
+                <NavBar />
+                <Switch>
+                  <Route exact path="/" component={Home} />
+                  <Route exact path="/events" component={Events} />
+                  <Route exact path="/media" component={Media} />
+                  <Route exact path="/contact" component={ContactForm} />
+                  <Route exact path="/admin-login" component={Login} />
+                </Switch>
+              </div>
+            )}
           </div>
         </BrowserRouter>
       </AuthContext.Provider>
