@@ -42,7 +42,10 @@ class AddEventForm extends React.Component {
         alert(res.message)
         this.setState(this.initialState)
       })
-      .catch(err => alert(err.message))
+      .catch(err => {
+        console.log(err)
+        alert(err.responseJSON.message)
+      })
   }
 
   render() {

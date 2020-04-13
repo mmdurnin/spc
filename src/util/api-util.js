@@ -8,17 +8,28 @@ export const fetchEvents = () => {
 }
 
 export const addEvent = (event) => {
+  const header = localStorage.token;
+  console.log(localStorage);
+  console.log(localStorage.token);
+  console.log(header);
   return $.ajax({
     url: 'http://localhost:3002/api/admin/events',
     method: 'POST',
-    data: event
+    data: event,
+    headers: {
+      token: header
+    }
   })
 }
 
 export const removeEvent = (key) => {
+  const header = localStorage.token;
   return $.ajax({
     url: 'http://localhost:3002/api/admin/events',
     method: 'DELETE',
-    data: key
+    data: key,
+    headers: {
+      token: header
+    }
   })
 }

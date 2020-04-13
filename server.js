@@ -41,7 +41,11 @@ app.post("/api/login", (req, res) => {
 app.use("/api/admin", function (req, res, next) {
   console.log("middleware is verifying token")
   const token = req.get("token");
-  if (token !== process.env.ACCESSTOKEN) {
+  console.log("ENV TOKEN")
+  console.log(process.env.ACCESSTOKEN)
+  console.log("token")
+  console.log(token)
+  if (token !== process.env.ACCESSTOKEN || !token || !process.env.ACCESSTOKEN) {
     res.status(401).send({ message: "Not Authorized" });
   } else {
     console.log("authorized");
