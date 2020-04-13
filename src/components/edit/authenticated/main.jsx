@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import EventForm from './event-form';
 import MailingList from './mailing-list';
+import "../../../stylesheets/admin.css";
 
 const AuthMain = () => {
   const components = [

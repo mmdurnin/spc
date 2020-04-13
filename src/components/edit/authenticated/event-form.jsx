@@ -3,7 +3,6 @@ import { AuthContext } from "../../App";
 import AddEventForm from './add-event';
 import EditableEvents from './editable-events';
 import AuthButton from '../auth-button';
-import '../../../stylesheets/admin.css';
 
 const EventForm = () => {
   const { dispatch } = React.useContext(AuthContext);
