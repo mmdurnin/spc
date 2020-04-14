@@ -35,9 +35,13 @@ export const removeEvent = (key) => {
 }
 
 export const fetchMailingList = () => {
+  const header = localStorage.token;
   return $.ajax({
     url: "/api/admin/mailing_list",
-    method: 'GET'
+    method: 'GET',
+    headers: {
+      token: header
+    }
   });
 }
 
