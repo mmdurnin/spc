@@ -117,3 +117,17 @@ form .scroll {
 .editable-events .event button, form .event button {
   font-size: 10px;
 }
+
+/* mailing list */
+.email-item {
+  color: white;
+}
+
+.email-item section {
+  align-items: center;
+}
+
+.email-item button {
+  border: 1px solid white;
+  border-radius: 3px;
+}

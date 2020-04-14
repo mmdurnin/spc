@@ -53,7 +53,7 @@ export const addEmail = (record) => {
   })
 }
 
-export const deleteEmail = (id) => {
+export const removeEmail = (id) => {
   const header = localStorage.token;
   return $.ajax({
     url: 'http://localhost:3002/api/admin/email',
