@@ -68,7 +68,7 @@ const db = admin.database();
 app.get("/api/events", function(req, res) {
   const ref = db.ref("/events");
   ref.once("value", function(snapshot) {
-    var data = snapshot.val();
+    const data = snapshot.val();
     res.send(data)
   })
 })
@@ -91,6 +91,32 @@ app.delete("/api/admin/events", function(req, res) {
   const ref = db.ref("/events")
   ref.child(req.body.id).remove()
     .then(() => res.status(200).send({ message: "successfully removed" }))
+    .catch((err) => res.status(418).send({ message: err }))
+})
+
+app.get("/api/admin/mailing_list", function(req, res) {
+  const ref = db.ref("/mailing_list");
+  ref.once("value", function (snapshot) {
+    const data = snapshot.val();
+    res.send(data);
+  });
+})
+
+app.post("/api/email", function(req, res) {
+  const ref = db.ref(`/mailing_list/${req.body.mailing_id}`);
+  ref.set(req.body.data, function(error) {
+    if (error) {
+      res.status(418).send({ message: "Unable to add email to mailing list" })
+    } else {
+      res.status(200).send({ message: "Successfully added to mailing list" })
+    }
+  })
+})
+
+app.delete("/api/admin/email", function(req, res) {
+  const ref = db.ref("/mailing_list");
+  ref.child(req.body.id).remove()
+    .then(() => res.status(200).send({ message: "successfully removed from mailing list" }))
     .catch((err) => res.status(418).send({ message: err }))
 })
 
