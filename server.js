@@ -103,8 +103,9 @@ app.get("/api/admin/mailing_list", function(req, res) {
 })
 
 app.post("/api/email", function(req, res) {
+  console.log(req.body)
   const ref = db.ref(`/mailing_list/${req.body.mailing_id}`);
-  ref.set(req.body.data, function(error) {
+  ref.set(req.body.emailRecord, function(error) {
     if (error) {
       res.status(418).send({ message: "Unable to add email to mailing list" })
     } else {

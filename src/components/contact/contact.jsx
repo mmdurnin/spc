@@ -1,4 +1,5 @@
 import React from 'react';
+import { addEmail } from '../../util/api-util';
 import '../../stylesheets/contact-form.css';
 
 import photo1 from '../../images/ph_1_edited.jpg';
@@ -27,6 +28,7 @@ class ContactForm extends React.Component {
     this.toggleCheck = this.toggleCheck.bind(this)
     this.update = this.update.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.subscribeToNewsLetter = this.subscribeToNewsLetter.bind(this)
   }
 
   toggleDD(e, dropdownType) {
@@ -70,6 +72,7 @@ class ContactForm extends React.Component {
       .then(response => {
         if (response.status === "success") {
           alert("Message Sent!");
+          if (this.state.newsletter === true) this.subscribeToNewsLetter();
           this.resetForm();
         } else if (response.status === "fail") {
           alert("Message failed to send.");
@@ -88,6 +91,18 @@ class ContactForm extends React.Component {
       message: "",
       newsletter: false
     });
+  }
+
+  subscribeToNewsLetter() {
+    const emailRecord = {
+      email: this.state.email,
+      message: this.state.message,
+      name: this.state.firstName.concat(` ${this.state.lastName}`)
+    }
+
+    const data = {mailing_id: Date.now(), emailRecord: emailRecord}
+    addEmail(data)
+      .then((res) => console.log(res.message))
   }
 
   render() {
@@ -133,7 +148,7 @@ class ContactForm extends React.Component {
           <h4>Details</h4>
           <div className="row">
             <div className="input-wrapper">
-              <input type="text" placeholder="First Name" value={this.state.firstName} onChange={(e) => this.update(e, "firstName")}/>
+              <input type="text" placeholder="First Name" value={this.state.firstName} onChange={(e) => this.update(e, "firstName")} required/>
             </div>
             <div className="input-wrapper">
               <input type="text" placeholder="Last Name" value={this.state.lastName} onChange={(e) => this.update(e, "lastName")} />
