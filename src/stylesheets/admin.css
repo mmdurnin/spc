@@ -125,9 +125,11 @@ form .scroll {
 
 .email-item section {
   align-items: center;
+  padding-top: .85rem;
 }
 
 .email-item button {
   border: 1px solid white;
   border-radius: 3px;
+  font-weight: 200;
 }

@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import { removeEmail } from '../../../util/api-util';
 
 const deleteButtonStyle = {
   position: "relative",
@@ -21,9 +20,7 @@ const showMessageButtonStyle = {
 const EmailRecord = (props) => {
   const [showDetails, toggleDetails] = useState(false);
 
-  const deleteEmail = (id) => {
-    removeEmail(id)
-  }
+  
 
   const message = <h4>{props.record.message}</h4>
   const detailsButtonTitle = (showDetails === false) ? "SHOW MESSAGE FROM SUBSCRIBER" : "HIDE MESSAGE";
@@ -34,7 +31,7 @@ const EmailRecord = (props) => {
         <h3>{props.record.name}</h3>
         <h3><strong>{props.record.email}</strong></h3>
         <button style={showMessageButtonStyle} onClick={() => toggleDetails(!showDetails)}>{detailsButtonTitle}</button>
-        <button style={deleteButtonStyle} id="deleteButton" onClick={() => deleteEmail(props.id)}>Delete From Mailing List</button>
+        <button style={deleteButtonStyle} id="deleteButton" onClick={() => props.deleteEmail({id: props.id})}>Delete From Mailing List</button>
       </section>
       {(showDetails) ? message : null}
     </div>

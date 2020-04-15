@@ -116,6 +116,7 @@ app.post("/api/email", function(req, res) {
 
 app.delete("/api/admin/email", function(req, res) {
   const ref = db.ref("/mailing_list");
+  console.log(req)
   ref.child(req.body.id).remove()
     .then(() => res.status(200).send({ message: "successfully removed from mailing list" }))
     .catch((err) => res.status(418).send({ message: err }))
