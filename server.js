@@ -75,7 +75,6 @@ app.get("/api/events", function(req, res) {
 
 app.post("/api/admin/events", function(req, res) {
   console.log("requesting an add to db")
-  console.log(req.body)
   const ref = db.ref(`/events/${req.body.eventId}`)
   ref.set(req.body.eventData, function(error) {
     if (error) {
@@ -103,7 +102,6 @@ app.get("/api/admin/mailing_list", function(req, res) {
 })
 
 app.post("/api/email", function(req, res) {
-  console.log(req.body)
   const ref = db.ref(`/mailing_list/${req.body.mailing_id}`);
   ref.set(req.body.emailRecord, function(error) {
     if (error) {
@@ -116,7 +114,6 @@ app.post("/api/email", function(req, res) {
 
 app.delete("/api/admin/email", function(req, res) {
   const ref = db.ref("/mailing_list");
-  console.log(req)
   ref.child(req.body.id).remove()
     .then(() => res.status(200).send({ message: "successfully removed from mailing list" }))
     .catch((err) => res.status(418).send({ message: err }))
