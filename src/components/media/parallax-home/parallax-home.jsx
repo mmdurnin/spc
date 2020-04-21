@@ -7,11 +7,12 @@ import '../../../stylesheets/parallax.css';
 
 function ParallaxHome() {
   return(
-    <div className="parallax-container column">
+    <div className="parallax-container">
       <img src={image1} className="par par-1" />
       <img src={image2} className="par par-2" />
       <img src={image3} className="par par-3" />
       <img src={image4} className="par par-4" />
+      <h1 className="par">The Crew</h1>
     </div>
   )
 }

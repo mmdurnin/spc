@@ -4,25 +4,20 @@
 
 .parallax-container {
   position: relative;
-  align-items: center;
+  height: 100vh;
+  width: 100%;
   padding: 2em;
+  /* align-items: center;
+  justify-content: baseline; */
+  /* display: grid;
+  grid-template-rows: 10% 30% auto; */
 }
 
 .par {
   position: absolute;
   z-index: -1;
   height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
-.par-1 {
-  display: grid;
-  grid-template-rows: 10% 30% auto;
-}
-
-.par-3 {
-  top: 105px;
-}
-
-/* .par:not(.par-3) {
-  visibility: hidden;
-} */
