@@ -6,33 +6,39 @@
   position: relative;
   height: 100vh;
   width: 100%;
-  padding: 2em;
   z-index: -1;
-  margin-top: 5rem;
+  margin-top: 10rem;
   /* isolation: isolate; */
 }
 
 .par {
   position: absolute;
   z-index: -1;
-  width: 100%;
+  width: 100vw;
   height: auto;
   object-fit: cover;
-  margin: auto;
 }
 
 .par-text {
-  top: -50px;
+  top: -100px;
   text-align: center;
-  font-size: 15vw;
+  font-size: 19vw;
   font-weight: 600;
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
-  color: rgba(53, 147, 157, 0.776);
+  /* color: #58eea9; */
+  /* color: #99ffd0; */
+  /* color: white; */
+  color: #D3FFFF;
   mix-blend-mode: exclusion;
 }
 
-/*
-par-3 {
-  top: 100px;
+/* .par-2 {
+  height: 150vh;
+  top: 150px;
+} */
+
+
+/* .par-3 {
+  top: 200px;
 } */
