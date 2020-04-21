@@ -6,18 +6,31 @@
   position: relative;
   height: 100vh;
   width: 100%;
+  /* background: url(../images/ph_29_vignette.jpg) 50%/cover; */
   padding: 2em;
-  /* align-items: center;
-  justify-content: baseline; */
-  /* display: grid;
-  grid-template-rows: 10% 30% auto; */
+  z-index: -1;
+  isolation: isolate;
+}
+
+.par-text {
+  text-align: center;
+  color: white;
+  mix-blend-mode: exclusion;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20vw;
+  text-align: center;
 }
 
 .par {
   position: absolute;
   z-index: -1;
+  width: 100%;
   height: auto;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  object-fit: cover;
+  margin: auto;
 }
+
+/*
+par-3 {
+  top: 100px;
+} */
