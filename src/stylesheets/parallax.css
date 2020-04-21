@@ -1,0 +1,28 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.parallax-container {
+  position: relative;
+  align-items: center;
+  padding: 2em;
+}
+
+.par {
+  position: absolute;
+  z-index: -1;
+  height: auto;
+}
+
+.par-1 {
+  display: grid;
+  grid-template-rows: 10% 30% auto;
+}
+
+.par-3 {
+  top: 105px;
+}
+
+/* .par:not(.par-3) {
+  visibility: hidden;
+} */
