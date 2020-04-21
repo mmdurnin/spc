@@ -6,19 +6,10 @@
   position: relative;
   height: 100vh;
   width: 100%;
-  /* background: url(../images/ph_29_vignette.jpg) 50%/cover; */
   padding: 2em;
   z-index: -1;
-  isolation: isolate;
-}
-
-.par-text {
-  text-align: center;
-  color: white;
-  mix-blend-mode: exclusion;
-  font-family: 'Roboto', sans-serif;
-  font-size: 20vw;
-  text-align: center;
+  margin-top: 5rem;
+  /* isolation: isolate; */
 }
 
 .par {
@@ -28,6 +19,17 @@
   height: auto;
   object-fit: cover;
   margin: auto;
+}
+
+.par-text {
+  top: -50px;
+  text-align: center;
+  font-size: 15vw;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  color: rgba(53, 147, 157, 0.776);
+  mix-blend-mode: exclusion;
 }
 
 /*
