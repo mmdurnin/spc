@@ -6,14 +6,14 @@ import Parallax from "react-rellax";
 // import image4 from '../../../images/parallax/ph_29_4.png';
 import image1 from '../../../images/ph_29_vignette.jpg';
 import image2 from '../../../images/light_bubbles.png';
-import image3 from '../../../images/square_pop.png';
+import image3 from '../../../images/light_bubbles_2.png';
 import '../../../stylesheets/parallax.css';
 
 function ParallaxHome() {
   return (
-    <section>
-      <Parallax speed={1} className="bubbles">
-        <img src={image2} className="par par-2" />
+    <section className="parallax-grandparent">
+      <Parallax speed={5} className="bubbles">
+        <img src={image3} className="par par-2" />
       </Parallax>
       <div className="parallax-container">
         <Parallax speed={1}>

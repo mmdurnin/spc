@@ -2,10 +2,19 @@
   box-sizing: border-box;
 }
 
+.parallax-grandparent {
+  position: relative;
+  z-index: -1;
+}
+
 .bubbles {
+  position: relative;
   width: 100%;
-  padding-top: 2rem;
-  height: 50vh;
+  padding-top: 10rem;
+  padding-bottom: 40vh;
+  height: auto;
+  /* z-index: -5; */
+  opacity: .6;
 }
 
 .parallax-container {
