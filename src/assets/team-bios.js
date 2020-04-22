@@ -2,26 +2,26 @@ export const team = {
   kumo: {
     urls: {},
     bio: "",
-    image: ''
+    image: 'ph_28.jpg'
   },
   sid: {
     urls: {},
     bio: "",
-    image: ''
+    image: 'ph_18.jpeg'
   },
   javon: {
     urls: {},
     bio: "",
-    image: ''
+    image: 'ph_33_javon.jpg'
   },
   jake: {
     urls: {},
     bio: "",
-    image: ''
+    image: 'ph_23_Jake_edited.jpg'
   },
   robert: {
     urls: {},
     bio: "",
-    image: ''
+    image: 'ph_26_robert.jpg'
   }
 }
