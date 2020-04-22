@@ -11,30 +11,35 @@ import '../../../stylesheets/parallax.css';
 
 function ParallaxHome() {
   return (
-    <section className="parallax-container">
-      <Parallax speed={1}>
-        <img src={image1} className="par par-1" />
+    <section>
+      <Parallax speed={1} className="bubbles">
         <img src={image2} className="par par-2" />
-        {/* <img src={image3} className="par par-3" /> */}
-        <Parallax speed={-1.5} className="par par-text">
-          The Crew
+      </Parallax>
+      <div className="parallax-container">
+        <Parallax speed={1}>
+          <img src={image1} className="par par-1" />
+          <img src={image2} className="par par-2" />
+          {/* <img src={image3} className="par par-3" /> */}
+          <Parallax speed={-1.5} className="par par-text">
+            The Crew
+          </Parallax>
         </Parallax>
-      </Parallax>
 
-      <Parallax speed={1} id="arrow-container">
-        <div class="sliding_arrow">
-          <div class="arrow"></div>
-        </div>
-        <div class="sliding_arrow animation1">
-          <div class="arrow"></div>
-        </div>
-        <div class="sliding_arrow animation2">
-          <div class="arrow"></div>
-        </div>
-        <div class="sliding_arrow animation3">
-          <div class="arrow"></div>
-        </div>
-      </Parallax>
+        <Parallax speed={1} id="arrow-container">
+          <div class="sliding_arrow">
+            <div class="arrow"></div>
+          </div>
+          <div class="sliding_arrow animation1">
+            <div class="arrow"></div>
+          </div>
+          <div class="sliding_arrow animation2">
+            <div class="arrow"></div>
+          </div>
+          <div class="sliding_arrow animation3">
+            <div class="arrow"></div>
+          </div>
+        </Parallax>
+      </div>
     </section>
   );
 }
