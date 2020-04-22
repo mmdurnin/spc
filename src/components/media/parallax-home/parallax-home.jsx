@@ -21,7 +21,7 @@ function ParallaxHome() {
         </Parallax>
       </Parallax>
 
-      <div id="arrow-container">
+      <Parallax speed={1} id="arrow-container">
         <div class="sliding_arrow">
           <div class="arrow"></div>
         </div>
@@ -34,7 +34,7 @@ function ParallaxHome() {
         <div class="sliding_arrow animation3">
           <div class="arrow"></div>
         </div>
-      </div>
+      </Parallax>
     </div>
   );
 }
