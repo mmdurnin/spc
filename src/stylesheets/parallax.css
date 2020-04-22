@@ -7,22 +7,41 @@
   z-index: -1;
 }
 
-.bubbles {
+.p-spacer {
   position: relative;
+  height: 80vh;
   width: 100%;
-  padding-top: 10rem;
-  padding-bottom: 40vh;
-  height: auto;
-  /* z-index: -5; */
-  opacity: .6;
+  margin-top: 30rem;
+  justify-content: stretch;
+  align-items: stretch;
+}
+
+.bubbles, .bubbles img {
+  position: absolute;
+  width: 100vw;
+  height: 80vh;
+  bottom: 0px;
+  opacity: .9;
+  padding: 0px;
+  margin: 0px;
+}
+
+.gradient-blend {
+  position: absolute;
+  height: 40vh;
+  width: 100%;
+  bottom: 300px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.003) 0%, rgba(0, 0, 0, 0.113) 10%, rgba(0, 0, 0, 0.3) 30%, rgba(0, 0, 0, 0.5) 70%, rgba(0, 0, 0, 0.213) 90%, rgba(0, 0, 0, 0.006) 100%);
+  padding: 0px;
+  margin: 0px;
 }
 
 .parallax-container {
   position: relative;
-  height: 100vh;
+  /* height: 100vh; */
   width: 100%;
   z-index: -1;
-  margin-top: 4rem;
+  /* margin-top: 4rem; */
 }
 
 .par {
@@ -34,7 +53,7 @@
 }
 
 .par-text {
-  top: -100px;
+  top: -400px;
   text-align: center;
   font-size: 19vw;
   font-weight: 600;

@@ -12,20 +12,30 @@ import '../../../stylesheets/parallax.css';
 function ParallaxHome() {
   return (
     <section className="parallax-grandparent">
-      <Parallax speed={5} className="bubbles">
-        <img src={image3} className="par par-2" />
+      {/* <div className="parallax-column column">
+        <Parallax speed={3} className="bubbles">
+          <img src={image3}  />
+        </Parallax>
+        <Parallax speed={5} className="gradient-blend" />
+      </div> */}
+      <Parallax speed={2} className="column p-spacer">
+        <Parallax speed={2} className="bubbles">
+          <img src={image3} />
+        </Parallax>
+        <div className="gradient-blend" />
       </Parallax>
+
       <div className="parallax-container">
-        <Parallax speed={1}>
+        <Parallax speed={2.3}>
           <img src={image1} className="par par-1" />
           <img src={image2} className="par par-2" />
           {/* <img src={image3} className="par par-3" /> */}
-          <Parallax speed={-1.5} className="par par-text">
+          <Parallax speed={-2.3} className="par par-text">
             The Crew
           </Parallax>
         </Parallax>
 
-        <Parallax speed={1} id="arrow-container">
+        {/* <Parallax speed={1} id="arrow-container">
           <div class="sliding_arrow">
             <div class="arrow"></div>
           </div>
@@ -38,7 +48,7 @@ function ParallaxHome() {
           <div class="sliding_arrow animation3">
             <div class="arrow"></div>
           </div>
-        </Parallax>
+        </Parallax> */}
       </div>
     </section>
   );
