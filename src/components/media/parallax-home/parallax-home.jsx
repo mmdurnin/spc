@@ -11,7 +11,7 @@ import '../../../stylesheets/parallax.css';
 
 function ParallaxHome() {
   return (
-    <div className="parallax-container">
+    <section className="parallax-container">
       <Parallax speed={1}>
         <img src={image1} className="par par-1" />
         <img src={image2} className="par par-2" />
@@ -35,7 +35,7 @@ function ParallaxHome() {
           <div class="arrow"></div>
         </div>
       </Parallax>
-    </div>
+    </section>
   );
 }
 

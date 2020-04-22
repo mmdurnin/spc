@@ -7,8 +7,6 @@
   height: 100vh;
   width: 100%;
   z-index: -1;
-  margin-top: 10rem;
-  /* isolation: isolate; */
 }
 
 .par {
@@ -36,7 +34,7 @@
 #arrow-container {
   z-index: 3;
   position: absolute;
-  top: 200px;
+  top: 350px;
   left: 50%;
   transform: translate3d(0px, -260px, 0px) translateX(-50%) !important;
   cursor: pointer;
