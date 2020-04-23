@@ -5,8 +5,8 @@ const MemberDescription = (props) => {
 
   console.log(bio)
   return(
-    <div className="bio-container">
-
+    <div className="bio-container column">
+      <p>{bio}</p>
     </div>
   )
 };
