@@ -53,17 +53,20 @@
 }
 
 .par-text {
-  top: -400px;
+  top: -550px;
   text-align: center;
-  font-size: 19vw;
+  /* font-size: 19vw; */
+  font-size: 12vw;
   font-weight: 600;
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   /* color: #58eea9; */
   /* color: #99ffd0; */
   /* color: white; */
-  color: rgb(222, 252, 252);
-  mix-blend-mode: exclusion;
+  /* color: rgb(222, 252, 252); */
+  color: purple;
+  /* mix-blend-mode: exclusion; */
+  mix-blend-mode: color-burn;
 }
 
 #arrow-container {

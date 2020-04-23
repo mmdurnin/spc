@@ -26,11 +26,11 @@ function ParallaxHome() {
       </Parallax>
 
       <div className="parallax-container">
-        <Parallax speed={2.3}>
+        <Parallax speed={2.5}>
           <img src={image1} className="par par-1" />
           <img src={image2} className="par par-2" />
           {/* <img src={image3} className="par par-3" /> */}
-          <Parallax speed={-2.3} className="par par-text">
+          <Parallax speed={-2.8} className="par par-text">
             The Crew
           </Parallax>
         </Parallax>
