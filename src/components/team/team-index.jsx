@@ -1,6 +1,7 @@
 import React from 'react';
 import { BIOS } from '../../assets/team-bios';
 import Member from './member';
+import '../../stylesheets/team.css';
 
 const TeamIndex = () => {
   const members = Object.keys(BIOS);
