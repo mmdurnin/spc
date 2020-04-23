@@ -1,3 +1,10 @@
+import React from 'react';
+import ph_kumo from '../images/ph_28.jpg';
+import ph_sid from '../images/ph_18.jpeg';
+import ph_robert from '../images/ph_26_Robert.jpg';
+import ph_javon from '../images/ph_33_javon.jpg';
+import ph_jake from '../images/ph_23_Jake_edited.jpg';
+
 export const BIOS = {
   kumo: {
     name: "Aaron Cunningham",
@@ -14,7 +21,7 @@ export const BIOS = {
     },
     bio:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    image: "ph_28.jpg",
+    image: <img src={ph_kumo}/>,
   },
   sid: {
     name: "Sidney Tolbert",
@@ -27,7 +34,7 @@ export const BIOS = {
     },
     bio:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    image: "ph_18.jpeg",
+    image: <img src={ph_sid}/>,
   },
   javon: {
     name: "Javon MaBon",
@@ -41,7 +48,7 @@ export const BIOS = {
     },
     bio:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    image: "ph_33_javon.jpg",
+    image: <img src={ph_javon}/>,
   },
   jake: {
     name: "Jake Mager",
@@ -56,7 +63,7 @@ export const BIOS = {
     },
     bio:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    image: "ph_23_Jake_edited.jpg",
+    image: <img src={ph_jake}/>,
   },
   robert: {
     name: "Robert Richard Bell",
@@ -71,6 +78,6 @@ export const BIOS = {
     },
     bio:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    image: "ph_26_robert.jpg",
+    image: <img src={ph_robert}/>,
   },
 };

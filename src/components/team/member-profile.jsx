@@ -5,7 +5,8 @@ const MemberProfile = (props) => {
 
   console.log(info)
   return(
-    <div className="info-container">
+    <div className="profile-container">
+      {info.image}
     </div>
   )
 };
