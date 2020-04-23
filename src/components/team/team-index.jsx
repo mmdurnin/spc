@@ -5,15 +5,15 @@ import '../../stylesheets/team.css';
 
 const TeamIndex = () => {
   const members = Object.keys(BIOS);
-  console.log(BIOS)
+
   return(
-    <div>
+    <section className="column team-index">
       {
         members.map((member, idx) => {
-          return <Member key={idx} member={BIOS[member]}/>
+          return <Member key={idx} placementKey={idx} member={BIOS[member]}/>
         })
       }
-    </div>
+    </section>
   )
 }
 
