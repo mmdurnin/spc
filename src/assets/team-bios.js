@@ -59,7 +59,16 @@ export const team = {
     image: "ph_23_Jake_edited.jpg",
   },
   robert: {
-    urls: {},
+    name: "Robert Richard Bell",
+    nickname: "Fantum",
+    urls: {
+      youtube_handle: "Robert Fantum Bell",
+      youtube: "https://www.youtube.com/channel/UCZraNd5GBykcaYRO65U9J1Q/featured",
+      facebook: "https://www.facebook.com/robertfantumbell",
+      instagram_handle: "bboyfantum",
+      instagram: "https://www.instagram.com/bboyfantum/",
+      imdb: "https://www.imdb.com/name/nm9784819/"
+    },
     bio:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     image: "ph_26_robert.jpg",
