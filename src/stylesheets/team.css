@@ -19,11 +19,20 @@
   margin: 0px;
 }
 
+/* description */
 .bio-container {
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 30px;
 }
+
+.bio-container p {
+  line-height: 15mm;
+  font-size: 30px;
+}
+
+
+/* picture */
 
 /* .profile-container {
 
